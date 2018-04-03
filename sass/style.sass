@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|IBM+Plex+Sans+Condensed|Oswald|Ubuntu')
+$color_base: #C4E0E5
+$color_blue: #1FA2FF
+$color_green: #12D8FA
+
+html,body
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 0
+  font-family: 'IBM Plex Sans Condensed', sans-serif
+  background-color: $color_base
+  flex-direction: column
+
+.box
+  background: linear-gradient(130deg,$color_blue,$color_green,$color_base)
+  width: 80vw
+  height: auto
+  display: flex
+  justify-content: center
+  align-items: flex-start
+  margin-top: 4vh
+  box-shadow: 0px 0px 20px rgba(black,0.3)
+  transition: 0.5s
+  &:hover
+    margin-top: 30px
+    box-shadow: 10px 10px 50px rgba(black,0.1)
+.box-in
+  background-color: white
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-direction: column
+  width: 77vw
+  height: 95%
+  margin-top: 20px
+  margin-bottom: 20px
+  .color
+    animation: colors 5s infinite alternate
+    @keyframes colors
+      0%,100%
+        color: black
+      50%
+        color: $color_blue
+  .box-table
+    line-height: 50px
+    width: 80%
+    td
+      border-bottom: 2px  dotted $color_base
+.small
+  display: none
+  padding: 10px
+  li,a
+    text-decoration: none
+    line-height: 40px
+    color: black
+    transition: 0.5s
+    list-style: none
+    &:hover
+      color: $color_blue
+.footer
+  color: white
+  text-align: center
+
+@media only screen and (max-width: 1000px)
+  *
+    font-size: 0.9rem
+  h1
+    font-size: 1.5rem
+  .box-in
+    margin-top: 10px
+    margin-bottom: 10px
+  .small
+    display: block
+  .box-table
+    display: none
+@media only screen and (min-width: 0px) and (max-width: 400px)
+  *
+    font-size: 0.9rem
+  h1
+    font-size: 1.3rem
+  .box-in
+    margin-top: 10px
+    margin-bottom: 10px
+  .small
+    display: block
+    font-size: 0.8rem
